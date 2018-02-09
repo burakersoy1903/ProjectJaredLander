@@ -1,0 +1,45 @@
+Chapter 01 -- 02082018 ---------------------------------------------------------
+Getting R
+Install R
+
+Chapter 02 -- 02082018 ---------------------------------------------------------
+The R Environment
+Install RStudio
+RStudio Settings
+Basic introduction for RStudio projects
+
+Chapter 02 Extra -- 02092018 ---------------------------------------------------
+Git vs. GitHub vs. RStudio
+Watch https://www.youtube.com/watch?v=KjLycV1IWqc
+Initial Version -- Project / Snapshot
+You either Init or Clone a repository
+Init -- Master branch -- stored in central repository
+Another saved version -- Head -- the current snapshot
+Develop branch -- Clone or Pull -- Local -- stored locally
+Edits -- Staging
+Save Edits -- Commit -- Include comments
+Commits area added to Head
+After all Staging and Commits -- 3 part process
+Because Master branch may be changed by other developers
+Pull the Current Master -- Merge with Local -- Push and create Current Master
+Tag or version numbering -- Release version -- v0.2.0
+Repository -- Whole sequence of events from the initialization, the cloning,
+all of those staging edits, commits, updating master branch, pull, merge, push
+Watch https://www.youtube.com/watch?v=qcjpHFwCugE&t=170s
+Nice video to watch -- Install, configure, apply version control in RStudio 
+Watch https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-managing-part-2/
+No install info -- How to use Git in RStudio
+Split off a seperate branch
+Git tab and Git dropdown
+Create a new project or add Git to your existing project
+Tools -- Project Options -- Git/SVN -- Version control system -- Git
+See the files not commited in Git tab -- Commit button
+To connect the repository in gitHub and local -- Tools -- Shell
+Check https://support.rstudio.com/hc/en-us/articles/200532077?version=1.1.419&mode=desktop
+Check https://github.com/garrettgman/git-project
+Check https://www.rstudio.com/resources/cheatsheets/
+Check http://r-pkgs.had.co.nz/git.html
+Shell -- git clone SSH link -- make sure you are in the right location to pull
+U:\>git config --global user.name burakersoy1903
+U:\>git config --global user.email burakersoy1903@gmail.com
+U:\>git config --global --list
