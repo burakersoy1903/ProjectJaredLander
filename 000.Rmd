@@ -23,8 +23,7 @@ After all Staging and Commits -- 3 part process
 Because Master branch may be changed by other developers
 Pull the Current Master -- Merge with Local -- Push and create Current Master
 Tag or version numbering -- Release version -- v0.2.0
-Repository -- Whole sequence of events from the initialization, the cloning,
-all of those staging edits, commits, updating master branch, pull, merge, push
+Repository -- Whole sequence of events from the initialization, the cloning, all of those staging edits, commits, updating master branch, pull, merge, push
 Watch https://www.youtube.com/watch?v=qcjpHFwCugE&t=170s
 Nice video to watch -- Install, configure, apply version control in RStudio 
 Watch https://www.rstudio.com/resources/webinars/rstudio-essentials-webinar-series-managing-part-2/
@@ -43,3 +42,56 @@ Shell -- git clone SSH link -- make sure you are in the right location to pull
 U:\>git config --global user.name burakersoy1903
 U:\>git config --global user.email burakersoy1903@gmail.com
 U:\>git config --global --list
+
+Chapter 03 -- 02092018 ---------------------------------------------------------
+https://cran.r-project.org/web/packages/ -- as of now 12127 packages
+Odds are good that if a statistical technique exits, it has been written in R
+survival package -- survival analysis
+ggplot2 package -- plotting
+sp package -- spatial data
+List of packages in this course: ggplot2, tidyr, dplyr, glmnet, rcpp, knitr
+Ctrl + 7 for packages tab
+Install or Delete pacakges by Packages pane or code [300-libraryInstall.R]
+Load or Unload packages before you use them by Packages pane or code [300-libraryInstall.R]
+Functions may have the same in different packages [300-libraryInstall.R]
+Packages review for needs: https://cran.r-project.org/web/views/
+
+Chapter 03 Extra -- 02092018 ---------------------------------------------------
+https://projecteuler.net/archives
+
+Chapter 04 -- 02092018 ---------------------------------------------------------
+We begin with the "hello, world!" of basic math: 1+1 
+PEMDAS (Parenthesis, Exponents, Multiplication, Division, Addition, Subtraction)
+Variable names cannot start with number or underscore
+Variable names are case sensetive
+Data types: numeric, character (string), Date/POSIXct (time-based), logical (TRUE/FALSE)
+Numeric is like float or double (handles integers and decimals)
+Integer is a numeric adat type
+Character data can be Character or Factor -- factor is a vector
+Date data can be Date (just date) or POSIXct (date and time)
+Date packages: lubridate and chron
+Logical data -- Be careful about using "T" or "F" as a variable name
+TRUE and FALSE (all uppercase) are objets and different than True and False
+Vectors cannot be of mixed type
+Vectors are not simple containers -- R is a vectorized language
+That means operations are applied to each element of the vector automatically
+No column or row vectors -- They are called one-dimensional matrices
+
+Chapter 04.4.1 -- 02XX2018 -----------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
