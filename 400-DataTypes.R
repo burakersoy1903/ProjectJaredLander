@@ -77,3 +77,37 @@ vector1 <- c(1,2,3,4,5,1,3)
 vector1
 vector2 <- c("R","Excel","SAS","Qlik")
 vector2
+vector1 * 3
+vector1 ^ 2
+sqrt(vector1)
+vX <- c(1,2,3,4,5,6,7,8,9,10)
+1:10
+1:10 * 2 # be careful about the result (PEMDAS)
+(1:10) ^ 2
+-3:3
+3:-3
+length(vX)
+length(1:10)
+vX + c(1:2)
+vX <= 5
+vX <= vector1 # Warning: longer object length is not a multiple of shorter object length
+any(vX <= vector1)
+all(vX <= vector1)
+nchar(vector1)
+nchar(vector2)
+vector2[1]
+vector2[1:2]
+vector2[c(1,4)] # Nonconsecutive access
+vNamed = c(One="a",Two="b",Three="c")
+vNamed["One"]
+
+# Factor Vectors
+vector2 <- c("R","Excel","Crystal","Qlik")
+factorVector2 <- as.factor(vector2)
+factorVector2 # rm(factorVector2)
+as.numeric(factorVector2)
+factorVector2 <- factor(c("R","Excel","Crystal","Qlik"),
+                           levels=c("Qlik","R","Crystal","Excel"),
+                           ordered=TRUE)
+factorVector2
+as.numeric(factorVector2)

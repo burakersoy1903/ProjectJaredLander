@@ -77,15 +77,19 @@ Vectors are not simple containers -- R is a vectorized language
 That means operations are applied to each element of the vector automatically
 No column or row vectors -- They are called one-dimensional matrices
 
-Chapter 04.4.1 -- 02XX2018 -----------------------------------------------------
+Chapter 04.4.1 -- 02122018 -----------------------------------------------------
+The most common way to create a vector is with c. The "c" stands for combine becaue multiple elements are being combined into a vector
+c function vs : operator
+: operator generates a squence of consecutive numbers, in either direction
+[StartValue] : [FinishValue]
+use length function to learn, number of elements (Loops in future?)
+Be careful about operating on two unequal vectors -- the shorter one gets recycled
+Short vector repeats every element in order untill all matched
+Any and All functions for any or all elements are True
+Accessing any element is like arrays -- more functionality
+Factors are drastically reduce the size of the variable because they are storing only the unique values
 
-
-
-
-
-
-
-
+Chapter 04.5 -- 02XX2018 -----------------------------------------------------
 
 
 
