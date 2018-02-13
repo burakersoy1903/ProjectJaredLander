@@ -111,3 +111,54 @@ factorVector2 <- factor(c("R","Excel","Crystal","Qlik"),
                            ordered=TRUE)
 factorVector2
 as.numeric(factorVector2)
+
+# Calling Functions
+vTest <- (1:10)
+mean(vTest)
+
+# Function Documentation
+?mean
+?':'
+apropos("mean")
+
+# Missing Data
+z <- c(1,2,NA,8,3,NA,3)
+z
+is.na(z)
+mean(z)
+mean(z, na.rm = TRUE) # first removes the missing data then calculates the mean
+z <- c(1,NULL,3)
+z
+length(z)
+d <- NULL
+is.null(d)
+is.null(7)
+
+# Pipes
+library(magrittr)
+vTest <- (1:10)
+mean(vTest)
+vTest %>% mean
+z <- c(1,2,NA,8,3,NA,3)
+sum(is.na(z)) # how many NAs are present
+z %>% is.na %>% sum
+mean(z, na.rm = TRUE)
+z %>% mean(na.rm = TRUE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

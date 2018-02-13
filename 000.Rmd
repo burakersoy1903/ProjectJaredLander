@@ -1,9 +1,9 @@
 Chapter 01 -- 02082018 ---------------------------------------------------------
-Getting R
+Getting R-----------------------------------------------------------------------
 Install R
 
 Chapter 02 -- 02082018 ---------------------------------------------------------
-The R Environment
+The R Environment---------------------------------------------------------------
 Install RStudio
 RStudio Settings
 Basic introduction for RStudio projects
@@ -44,6 +44,7 @@ U:\>git config --global user.email burakersoy1903@gmail.com
 U:\>git config --global --list
 
 Chapter 03 -- 02092018 ---------------------------------------------------------
+R Packages----------------------------------------------------------------------
 https://cran.r-project.org/web/packages/ -- as of now 12127 packages
 Odds are good that if a statistical technique exits, it has been written in R
 survival package -- survival analysis
@@ -60,6 +61,7 @@ Chapter 03 Extra -- 02092018 ---------------------------------------------------
 https://projecteuler.net/archives
 
 Chapter 04 -- 02092018 ---------------------------------------------------------
+Basics of R---------------------------------------------------------------------
 We begin with the "hello, world!" of basic math: 1+1 
 PEMDAS (Parenthesis, Exponents, Multiplication, Division, Addition, Subtraction)
 Variable names cannot start with number or underscore
@@ -89,12 +91,22 @@ Any and All functions for any or all elements are True
 Accessing any element is like arrays -- more functionality
 Factors are drastically reduce the size of the variable because they are storing only the unique values
 
-Chapter 04.5 -- 02XX2018 -----------------------------------------------------
+Chapter 04.5 -- 02132018 -----------------------------------------------------
+Mean fucntion accepts a vector as an argument, in its simplest form
+Using their name with an equal sign -- ??? argument?
+Missing adata -- NA is different than NULL
+Statistical programs use various techniques to represent missing data such as dash, a period, or even the number 99.
+R uses NA.
+Be careful about function behaviours with NA, such as mean returns NA
+Handling missing data is an important part of statistical analysis
+Popular technique: Multiple Imputation -- Chapter 25 -- packages: mi,mice,Amelia
+NA missingness vs. NULL nothingness
+NULL is atomical and cannot exist within a vector
+IF used inside a vector, it simply disappears
+Pipes are intersting -- A different way of function calling in magrittr package
 
-
-
-
-
+Chapter 05 -- 02XX2018 ---------------------------------------------------------
+Advanced Data Structures--------------------------------------------------------
 
 
 
