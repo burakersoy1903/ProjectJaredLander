@@ -68,7 +68,7 @@ Variable names cannot start with number or underscore
 Variable names are case sensetive
 Data types: numeric, character (string), Date/POSIXct (time-based), logical (TRUE/FALSE)
 Numeric is like float or double (handles integers and decimals)
-Integer is a numeric adat type
+Integer is a numeric data type
 Character data can be Character or Factor -- factor is a vector
 Date data can be Date (just date) or POSIXct (date and time)
 Date packages: lubridate and chron
@@ -80,6 +80,7 @@ That means operations are applied to each element of the vector automatically
 No column or row vectors -- They are called one-dimensional matrices
 
 Chapter 04.4.1 -- 02122018 -----------------------------------------------------
+Basic Math----------------------------------------------------------------------
 The most common way to create a vector is with c. The "c" stands for combine becaue multiple elements are being combined into a vector
 c function vs : operator
 : operator generates a squence of consecutive numbers, in either direction
@@ -91,7 +92,8 @@ Any and All functions for any or all elements are True
 Accessing any element is like arrays -- more functionality
 Factors are drastically reduce the size of the variable because they are storing only the unique values
 
-Chapter 04.5 -- 02132018 -----------------------------------------------------
+Chapter 04.5 -- 02132018 -------------------------------------------------------
+Calling Functions---------------------------------------------------------------
 Mean fucntion accepts a vector as an argument, in its simplest form
 Using their name with an equal sign -- ??? argument?
 Missing adata -- NA is different than NULL
@@ -105,8 +107,61 @@ NULL is atomical and cannot exist within a vector
 IF used inside a vector, it simply disappears
 Pipes are intersting -- A different way of function calling in magrittr package
 
-Chapter 05 -- 02XX2018 ---------------------------------------------------------
+Chapter 05 -- 02232018 ---------------------------------------------------------
 Advanced Data Structures--------------------------------------------------------
+Most common: data.frame, matrix, list, array
+Data.frame is one of the most cited reasons for R's ease of use
+Each column is a variable and each row is an observation
+Every column is a vector -- Within a column each elemnt must be of the same type
+However, every column may hold a different data type
+
+Chapter 05.2 -- 02XX2018 -------------------------------------------------------
+Lists---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
