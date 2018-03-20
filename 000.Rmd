@@ -115,11 +115,16 @@ Each column is a variable and each row is an observation
 Every column is a vector -- Within a column each elemnt must be of the same type
 However, every column may hold a different data type
 
-Chapter 05.2 -- 02XX2018 -------------------------------------------------------
+Chapter 05.2 -- 03202018 -------------------------------------------------------
 Lists---------------------------------------------------------------------------
+Data Structures so far: Vectors, Factors, Data.Frames, and Lists (now)
+Often a container needed to hold arbitrary objects of either the same type or varying types.
+Lists store any number of items of any type.
+You can append elements to lists as much as you want, but it is very computatinally expensive.
+So it is best to create a list as long as its final desired size and the fill it in using appropriate indices.
 
-
-
+Chapter 05.3 -- 03XX2018 -------------------------------------------------------
+Lists---------------------------------------------------------------------------
 
 
 

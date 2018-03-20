@@ -44,19 +44,42 @@ newFactor <- factor(c("Pennsylvania","New York","New Jersey",
 model.matrix(~ newFactor - 1)
 
 
+# Lists
+list(1,2,3) # creates a three elements list
+list(c(1,2,3)) # creates a single element list. Element is a vector
+list3 <- list(c(1,2,3), 3:7) # creates a two element list with 2 vestors
+list3
+list(theDF, 1:10)
+list5 <- list(theDF, 1:10, list3)
+list5
+names(list5)
+list5
+names(list5) <- c("data.frame", "vector", "list")
+list5
+names(list5) <- NULL # You can null the names 
+list5
+names(list5) <- c("data.frame", "vector", "list")
+list5
+list6 <- list(TheDataFrame=theDF,TheVecctor=1:10, TheList=list3) # name and create a list
+names(list6)
+list6
+emptyList <- vector(mode="list", length=4) # ?vector
+emptyList2 <- vector("list",4)
+# Online way of doing things --https://stackoverflow.com/questions/5688020/how-to-create-a-list-with-names-but-no-entries-in-r-splus
+emptyList3.names <- c("a", "b", "c")
+emptyList3 <- vector("list", length(emptyList3.names))
+names(emptyList3) <- emptyList3.names
+list5[[1]]
+list5[["data.frame"]]
+list5[[1]]$Sport
+list5[[1]][, "Second"]
+list5[[1]][, "Second", drop=FALSE]
+length(list5)
+list5[[4]] <- 2
+length(list5)
+list5[["NewElement"]] <- 3:6
+length(list5)
+list5
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Matrices
