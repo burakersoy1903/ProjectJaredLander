@@ -124,8 +124,8 @@ You can append elements to lists as much as you want, but it is very computatina
 So it is best to create a list as long as its final desired size and the fill it in using appropriate indices.
 
 Chapter 05.3 -- 03XX2018 -------------------------------------------------------
-Lists---------------------------------------------------------------------------
-
+Matrices---------------------------------------------------------------------------
+Data Structures so far: Vectors, Factors, Data.Frames, Lists, and Matrices (now)
 
 
 
