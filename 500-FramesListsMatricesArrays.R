@@ -47,39 +47,74 @@ model.matrix(~ newFactor - 1)
 # Lists
 list(1,2,3) # creates a three elements list
 list(c(1,2,3)) # creates a single element list. Element is a vector
-list3 <- list(c(1,2,3), 3:7) # creates a two element list with 2 vestors
-list3
+theList3 <- list(c(1,2,3), 3:7) # creates a two element list with 2 vestors
+theList3
 list(theDF, 1:10)
-list5 <- list(theDF, 1:10, list3)
-list5
-names(list5)
-list5
-names(list5) <- c("data.frame", "vector", "list")
-list5
-names(list5) <- NULL # You can null the names 
-list5
-names(list5) <- c("data.frame", "vector", "list")
-list5
-list6 <- list(TheDataFrame=theDF,TheVecctor=1:10, TheList=list3) # name and create a list
-names(list6)
-list6
+theList5 <- list(theDF, 1:10, List3)
+theList5
+names(theList5)
+theList5
+names(theList5) <- c("data.frame", "vector", "list")
+thelist5
+names(theList5) <- NULL # You can null the names 
+theList5
+names(theList5) <- c("data.frame", "vector", "list")
+theList5
+theList6 <- list(TheDataFrame=theDF,TheVector=1:10, TheList=theList3) # name and create a list
+names(theList6)
+theList6
 emptyList <- vector(mode="list", length=4) # ?vector
 emptyList2 <- vector("list",4)
 # Online way of doing things --https://stackoverflow.com/questions/5688020/how-to-create-a-list-with-names-but-no-entries-in-r-splus
 emptyList3.names <- c("a", "b", "c")
 emptyList3 <- vector("list", length(emptyList3.names))
 names(emptyList3) <- emptyList3.names
-list5[[1]]
-list5[["data.frame"]]
-list5[[1]]$Sport
-list5[[1]][, "Second"]
-list5[[1]][, "Second", drop=FALSE]
-length(list5)
-list5[[4]] <- 2
-length(list5)
-list5[["NewElement"]] <- 3:6
-length(list5)
-list5
+theList5[[1]]
+theList5[["data.frame"]]
+theList5[[1]]$Sport
+theList5[[1]][, "Second"]
+theList5[[1]][, "Second", drop=FALSE]
+length(theList5)
+theList5[[4]] <- 2
+length(theList5)
+theList5[["NewElement"]] <- 3:6
+length(theList5)
+theList5
 
 
 # Matrices
+theMatrixA <- matrix(1:10, nrow = 5) # 5 rows 2 columns 5x2 matrix # Matrix filled by rows
+theMatrixA
+theMatrixB <- matrix(21:30, 5) # it works without nrow, but nrow is better syntactically
+theMatrixB
+theMatrixC <- matrix(21:40, nrow = 2) # MatrixTest <- matrix(1:100, ncol = 5) # Matrix filled by columns
+theMatrixC
+?rm # delete MatrxC
+# rm(MatrxC) # Deleted the typo created variable
+nrow(theMatrixA)
+ncol(theMatrixA)
+dim(theMatrixA)
+theMatrixA + theMatrixB
+theMatrixA * theMatrixB
+theMatrixA == theMatrixB # Compare element-by-element, result is a matrix too
+t(theMatrixB)
+theMatrixA %*% t(theMatrixB)
+colnames(theMatrixA)
+rownames(theMatrixA)
+colnames(theMatrixA) <- c("Left", "Right")
+rownames(theMatrixA) <- c("1st", "2nd", "3rd", "4th", "5th")
+colnames(theMatrixC) <- LETTERS[1:10] # Special vector LETTERS for uppercase letters for lowercase
+rownames(theMatrixC) <- c("Top", "Bottom")
+theMatrixA
+theMatrixC
+t(theMatrixC) # Transposing vs. Matrix Multiplication for colnames and rownames # Lesson to learn
+theMatrixA %*% theMatrixC
+
+
+#Arrays
+theArray <- array(1:12, dim=c(2,3,2)) # dim=c(2,3,2) --> 2 rows, 3 columns, 2 arrays # 3 arrays --> vector repeats itself
+theArray
+?array
+theArray[1, , ] # show me only first rows --Column 1 is Row 1 of first array, Column 2 is Row 1 of second array
+theArray[1, ,1] # show me first array's first row
+theArray[ , ,1] # show me first array

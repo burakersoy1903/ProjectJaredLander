@@ -8,8 +8,8 @@ Install RStudio
 RStudio Settings
 Basic introduction for RStudio projects
 
-Chapter 02 Extra -- 02092018 ---------------------------------------------------
-Git vs. GitHub vs. RStudio
+Burak Notes -- 02092018 --------------------------------------------------------
+Git vs. GitHub vs. RStudio -----------------------------------------------------
 Watch https://www.youtube.com/watch?v=KjLycV1IWqc
 Initial Version -- Project / Snapshot
 You either Init or Clone a repository
@@ -52,9 +52,12 @@ ggplot2 package -- plotting
 sp package -- spatial data
 List of packages in this course: ggplot2, tidyr, dplyr, glmnet, rcpp, knitr
 Ctrl + 7 for packages tab
-Install or Delete pacakges by Packages pane or code [300-libraryInstall.R]
-Load or Unload packages before you use them by Packages pane or code [300-libraryInstall.R]
-Functions may have the same in different packages [300-libraryInstall.R]
+Chapter 03.1 --
+Install or Delete pacakges by Packages pane or code
+Chapter 03.2 --
+Load or Unload packages before you use them by Packages pane or code
+Functions may have the same in different packages
+Chapter 03.4 --
 Packages review for needs: https://cran.r-project.org/web/views/
 
 Chapter 03 Extra -- 02092018 ---------------------------------------------------
@@ -64,8 +67,10 @@ Chapter 04 -- 02092018 ---------------------------------------------------------
 Basics of R---------------------------------------------------------------------
 We begin with the "hello, world!" of basic math: 1+1 
 PEMDAS (Parenthesis, Exponents, Multiplication, Division, Addition, Subtraction)
+Chapter 04.2 --
 Variable names cannot start with number or underscore
 Variable names are case sensetive
+Chapter 04.3 --
 Data types: numeric, character (string), Date/POSIXct (time-based), logical (TRUE/FALSE)
 Numeric is like float or double (handles integers and decimals)
 Integer is a numeric data type
@@ -74,6 +79,7 @@ Date data can be Date (just date) or POSIXct (date and time)
 Date packages: lubridate and chron
 Logical data -- Be careful about using "T" or "F" as a variable name
 TRUE and FALSE (all uppercase) are objets and different than True and False
+Chapter 04.4 --
 Vectors cannot be of mixed type
 Vectors are not simple containers -- R is a vectorized language
 That means operations are applied to each element of the vector automatically
@@ -123,16 +129,41 @@ Lists store any number of items of any type.
 You can append elements to lists as much as you want, but it is very computatinally expensive.
 So it is best to create a list as long as its final desired size and the fill it in using appropriate indices.
 
-Chapter 05.3 -- 03XX2018 -------------------------------------------------------
-Matrices---------------------------------------------------------------------------
+Chapter 05.3 -- 03212018 -------------------------------------------------------
+Matrices------------------------------------------------------------------------
 Data Structures so far: Vectors, Factors, Data.Frames, Lists, and Matrices (now)
+Matrices are similar to data.frames, but they are rectangular and same data type for every row and column
+They also act like vectors with element-by-element math operations (addition, subtraction,etc)
+5 rows 2 columns 5x2 matrix
+Matrices can be filled by rows or columns
+Multiplying matrices (x) is not the same as matrix multiplication (%*%)
+Remember the farmer with 2 lots that grow 3 products (2x3 matrix) and 3 products that sell in 2 markets (3x2 matrix)
+The profit matrix as a result of the two matrices above will be 2X2
+Matrix multiplication requires the number of columns of the left-hand matrix to be the same as the number of rows of the right-hand matrix
+You can tanspose matrices by t() -- Big fish vs tall building metaphor (Wide vs. Long Data) (Wide form  vs. Long form of Data)
+Chapter 05.4 --
+Data Structures so far: Vectors, Factors, Data.Frames, Lists, Matrices, and Arrays (now)
+Array is a multidimensional vector
+It must all be of the same type
+Only Data.Frames and Lists have no data type restrictions!
+Matrices are restricted to two dimwnsions, while Arrays can have an arbitrary number
 
+Burak Notes -- 03212018 --------------------------------------------------------
+Wide vs. Long Data--------------------------------------------------------------
+(http://seananderson.ca/2013/10/19/reshape/) # Got the definition (I think)
+Wide data has a column for each variable.
+Long-format data has a column for possible variable types and a column for the values of those variables. Long-format data isn’t necessarily only two columns. For example, we might have ozone measurements for each day of the year. In that case, we could have another column for day. In other words, there are different levels of “longness”. The ultimate shape you want to get your data into will depend on what you are doing with it.
+(https://stackoverflow.com/questions/34590173/long-and-wide-data-when-to-use-what) # Learned a lot about R
+It turns out that you need wide-format data for some types of data analysis and long-format data for others. In reality, you need long-format data much more commonly than wide-format data. For example, ggplot2 requires long-format data (technically tidy data), plyr requires long-format data, and most modelling functions (such as lm(), glm(), and gam()) require long-format data. But people often find it easier to record their data in wide format.
+The overwhelming majority of R functions are designed for long format data.frames input. There are some special domains where wide format (typically matrices or arrays) is more common.
+I would suggest reading the tidyr "Tidy Data" vignette [win-yet] (cran.r-project.org/web/packages/tidyr/vignettes/tidy-data.html). Aside from describing the usage of tidyr it provides some insight into why data is structured in particular ways.
+Tidy Data paper from publisher (code included) https://www.jstatsoft.org/article/view/v059i10
+The rough answer to the question is that data, during processing, should always be long, and should only be widened for display purposes. Be cautious with this, though, as here "long" refers more to "tidy", rather than the pure long form.
+(https://www.r-bloggers.com/tall-big-data-wide-big-data/) # Get confused again :D
+In many statistical analyses we can think of n (the number of observations) and p (the number of variables per observation). In most cases, particularly when people refer to big data, n >> p. Thus, we may have 100 million people but we have only 10 potential predictors: tall data. In contrast, we may have only 1,000 individuals but with 50,000 points each coming from a near infrared spectrometry or information from 250,000 SNPs (a type of molecular marker): wide data. Both types of data will keep on growing but are challenging in a different way.
 
-
-
-
-
-
+Chapter 06 -- 03XX2018 ---------------------------------------------------------
+Reading Data into R-------------------------------------------------------------
 
 
 
