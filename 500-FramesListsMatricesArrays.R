@@ -1,4 +1,4 @@
-# data.frames
+# --- 5.1 data.frames ----------
 x <- 10:1
 y <- -4:5
 q <- c("Hockey","Football","Baseball","Curling","Rugby",
@@ -44,7 +44,7 @@ newFactor <- factor(c("Pennsylvania","New York","New Jersey",
 model.matrix(~ newFactor - 1)
 
 
-# Lists
+# --- 5.2 Lists ----------
 list(1,2,3) # creates a three elements list
 list(c(1,2,3)) # creates a single element list. Element is a vector
 theList3 <- list(c(1,2,3), 3:7) # creates a two element list with 2 vestors
@@ -82,7 +82,7 @@ length(theList5)
 theList5
 
 
-# Matrices
+# --- 5.3 Matrices ----------
 theMatrixA <- matrix(1:10, nrow = 5) # 5 rows 2 columns 5x2 matrix # Matrix filled by rows
 theMatrixA
 theMatrixB <- matrix(21:30, 5) # it works without nrow, but nrow is better syntactically
@@ -111,10 +111,19 @@ t(theMatrixC) # Transposing vs. Matrix Multiplication for colnames and rownames 
 theMatrixA %*% theMatrixC
 
 
-#Arrays
+# --- 5.4 Arrays ----------
 theArray <- array(1:12, dim=c(2,3,2)) # dim=c(2,3,2) --> 2 rows, 3 columns, 2 arrays # 3 arrays --> vector repeats itself
 theArray
 ?array
 theArray[1, , ] # show me only first rows --Column 1 is Row 1 of first array, Column 2 is Row 1 of second array
 theArray[1, ,1] # show me first array's first row
 theArray[ , ,1] # show me first array
+
+
+
+
+
+
+
+
+

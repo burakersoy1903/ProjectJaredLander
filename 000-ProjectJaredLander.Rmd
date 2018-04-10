@@ -52,25 +52,26 @@ ggplot2 package -- plotting
 sp package -- spatial data
 List of packages in this course: ggplot2, tidyr, dplyr, glmnet, rcpp, knitr
 Ctrl + 7 for packages tab
-Chapter 03.1 --
+--- 3.1 Installing Packages ----------
 Install or Delete pacakges by Packages pane or code
-Chapter 03.2 --
+--- 3.2 Loading Packages ----------
 Load or Unload packages before you use them by Packages pane or code
 Functions may have the same in different packages
-Chapter 03.4 --
+--- 3.4 Conclusion ----------
 Packages review for needs: https://cran.r-project.org/web/views/
 
-Chapter 03 Extra -- 02092018 ---------------------------------------------------
+Burak Notes -- 02092018 --------------------------------------------------------
 https://projecteuler.net/archives
 
 Chapter 04 -- 02092018 ---------------------------------------------------------
 Basics of R---------------------------------------------------------------------
+--- 4.1 Basic Math ----------
 We begin with the "hello, world!" of basic math: 1+1 
 PEMDAS (Parenthesis, Exponents, Multiplication, Division, Addition, Subtraction)
-Chapter 04.2 --
+--- 4.2 Variables ----------
 Variable names cannot start with number or underscore
 Variable names are case sensetive
-Chapter 04.3 --
+--- 4.3 Data Types ----------
 Data types: numeric, character (string), Date/POSIXct (time-based), logical (TRUE/FALSE)
 Numeric is like float or double (handles integers and decimals)
 Integer is a numeric data type
@@ -79,14 +80,14 @@ Date data can be Date (just date) or POSIXct (date and time)
 Date packages: lubridate and chron
 Logical data -- Be careful about using "T" or "F" as a variable name
 TRUE and FALSE (all uppercase) are objets and different than True and False
-Chapter 04.4 --
+--- 4.4 Vectors----------
 Vectors cannot be of mixed type
 Vectors are not simple containers -- R is a vectorized language
 That means operations are applied to each element of the vector automatically
 No column or row vectors -- They are called one-dimensional matrices
 
-Chapter 04.4.1 -- 02122018 -----------------------------------------------------
-Basic Math----------------------------------------------------------------------
+Chapter 04 -- 02122018 ---------------------------------------------------------
+--- 4.4.1 Vector Operations ----------
 The most common way to create a vector is with c. The "c" stands for combine becaue multiple elements are being combined into a vector
 c function vs : operator
 : operator generates a squence of consecutive numbers, in either direction
@@ -98,8 +99,8 @@ Any and All functions for any or all elements are True
 Accessing any element is like arrays -- more functionality
 Factors are drastically reduce the size of the variable because they are storing only the unique values
 
-Chapter 04.5 -- 02132018 -------------------------------------------------------
-Calling Functions---------------------------------------------------------------
+Chapter 04 -- 02132018 ---------------------------------------------------------
+--- 4.5 Calling Functions ----------
 Mean fucntion accepts a vector as an argument, in its simplest form
 Using their name with an equal sign -- ??? argument?
 Missing adata -- NA is different than NULL
@@ -115,22 +116,23 @@ Pipes are intersting -- A different way of function calling in magrittr package
 
 Chapter 05 -- 02232018 ---------------------------------------------------------
 Advanced Data Structures--------------------------------------------------------
+--- 5.1 data.frames ----------
 Most common: data.frame, matrix, list, array
 Data.frame is one of the most cited reasons for R's ease of use
 Each column is a variable and each row is an observation
 Every column is a vector -- Within a column each elemnt must be of the same type
 However, every column may hold a different data type
 
-Chapter 05.2 -- 03202018 -------------------------------------------------------
-Lists---------------------------------------------------------------------------
+Chapter 05 -- 03202018 ---------------------------------------------------------
+--- 5.2 Lists ----------
 Data Structures so far: Vectors, Factors, Data.Frames, and Lists (now)
 Often a container needed to hold arbitrary objects of either the same type or varying types.
 Lists store any number of items of any type.
 You can append elements to lists as much as you want, but it is very computatinally expensive.
 So it is best to create a list as long as its final desired size and the fill it in using appropriate indices.
 
-Chapter 05.3 -- 03212018 -------------------------------------------------------
-Matrices------------------------------------------------------------------------
+Chapter 05 -- 03212018 ---------------------------------------------------------
+--- 5.3 Matrices ----------
 Data Structures so far: Vectors, Factors, Data.Frames, Lists, and Matrices (now)
 Matrices are similar to data.frames, but they are rectangular and same data type for every row and column
 They also act like vectors with element-by-element math operations (addition, subtraction,etc)
@@ -141,7 +143,7 @@ Remember the farmer with 2 lots that grow 3 products (2x3 matrix) and 3 products
 The profit matrix as a result of the two matrices above will be 2X2
 Matrix multiplication requires the number of columns of the left-hand matrix to be the same as the number of rows of the right-hand matrix
 You can tanspose matrices by t() -- Big fish vs tall building metaphor (Wide vs. Long Data) (Wide form  vs. Long form of Data)
-Chapter 05.4 --
+--- 5.4 Arrays ----------
 Data Structures so far: Vectors, Factors, Data.Frames, Lists, Matrices, and Arrays (now)
 Array is a multidimensional vector
 It must all be of the same type
@@ -162,14 +164,17 @@ The rough answer to the question is that data, during processing, should always 
 (https://www.r-bloggers.com/tall-big-data-wide-big-data/) # Get confused again :D
 In many statistical analyses we can think of n (the number of observations) and p (the number of variables per observation). In most cases, particularly when people refer to big data, n >> p. Thus, we may have 100 million people but we have only 10 potential predictors: tall data. In contrast, we may have only 1,000 individuals but with 50,000 points each coming from a near infrared spectrometry or information from 250,000 SNPs (a type of molecular marker): wide data. Both types of data will keep on growing but are challenging in a different way.
 
-Chapter 06 -- 03XX2018 ---------------------------------------------------------
+Chapter 06 -- 04102018 ---------------------------------------------------------
 Reading Data into R-------------------------------------------------------------
+--- 6.1 Reading CSVs ----------
+The result of using read.table is a data.frame.
+Comma seperated values (CSV)
+https://jaredlander.com/data/
+Wrapper functions (read.csv) for read.table with preset arguments
+Large files can be slow to read into memory using read.table
 
-
-
-
-
-
+Chapter 06 -- MMDD2018 ---------------------------------------------------------
+--- 6.1.1 read_delim ----------
 
 
 

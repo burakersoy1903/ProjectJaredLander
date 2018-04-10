@@ -1,13 +1,16 @@
+# --- 4.1 Basic Math ----------
 # Direct calculation
 1+1
 4/3
 
-# Variables
+# --- 4.2 Variables ----------
 x <- 4*6+5
 4*(6+5) -> y
 x
 y
-# Suceesively assignment
+
+# --- 4.2.1 Variable Assignment ----------
+# Successively assignment
 a <- b <- 7
 a
 b
@@ -15,15 +18,18 @@ b
 assign ("j", 4)
 j
 
-# Remove variables -- Does not remove from operation system --Use gc command -- garbage collection
+# --- 4.2.2 Removing Variables ----------
+# Does not remove from operation system --Use gc command -- garbage collection
 j
 rm(j)
 j
 
+# --- 4.3 Data Types ----------
 # Check data type
 class(x)
 is.numeric(x)
 
+# --- 4.3.1 Numeric Data ----------
 #Integer
 i <- 5L
 i
@@ -35,19 +41,20 @@ is.numeric(i)
 class(4L * 3.8)
 class(5L / 2L)
 
-
+# --- 4.3.2 Character Data ----------
 # Character vs. Factor data -- factors are vectors
 x <- "data"
 x
 y <- factor("data")
 y
 
-# Lenght of caharacter
+# Lenght of character
 nchar(x)
 nchar("hello")
 nchar(y) # does not work with factors
 
-# Dates -- Format YYYY-MM-DD HH:MM
+# --- 4.3.3 Dates ----------
+# Format YYYY-MM-DD HH:MM
 date1 <- as.Date("2018-02-09")
 date1
 class(date1)
@@ -57,7 +64,7 @@ date2
 class(date2)
 as.numeric(date2)
 
-# Logicals
+# --- 4.3.4 Logical ----------
 TRUE * 5
 FALSE * 5
 k <- TRUE
@@ -72,7 +79,7 @@ is.logical(k)
 "data" == "stats"
 "data" < "stats"
 
-# Vectors
+# --- 4.4 Vectors ----------
 vector1 <- c(1,2,3,4,5,1,3)
 vector1
 vector2 <- c("R","Excel","SAS","Qlik")
@@ -101,7 +108,7 @@ vector2[c(1,4)] # Nonconsecutive access
 vNamed = c(One="a",Two="b",Three="c")
 vNamed["One"]
 
-# Factor Vectors
+# --- 4.4.2 Factor Vectors ----------
 vector2 <- c("R","Excel","Crystal","Qlik")
 factorVector2 <- as.factor(vector2)
 factorVector2 # rm(factorVector2)
@@ -112,21 +119,23 @@ factorVector2 <- factor(c("R","Excel","Crystal","Qlik"),
 factorVector2
 as.numeric(factorVector2)
 
-# Calling Functions
+# --- 4.5 Calling Functions ----------
 vTest <- (1:10)
 mean(vTest)
 
-# Function Documentation
+# --- 4.6 Function Documentation ----------
 ?mean
 ?':'
 apropos("mean")
 
-# Missing Data
+# --- 4.7 Missing Data ----------
+# --- 4.7.1 NA ----------
 z <- c(1,2,NA,8,3,NA,3)
 z
 is.na(z)
 mean(z)
 mean(z, na.rm = TRUE) # first removes the missing data then calculates the mean
+# --- 4.7.2 NULL ----------
 z <- c(1,NULL,3)
 z
 length(z)
@@ -134,7 +143,7 @@ d <- NULL
 is.null(d)
 is.null(7)
 
-# Pipes
+# --- 4.8 Pipes ----------
 library(magrittr)
 vTest <- (1:10)
 mean(vTest)

@@ -1,1 +1,47 @@
-# Reading CSVs
+# --- 6.1 Reading CSVs ----------
+# https://jaredlander.com/data/
+theUrl <- "http://jaredlander.com/data/TomatoFirst.csv"
+# "sep" argument gives the delimiter separating data cells
+# other "sep" argument values: "\t" (tab delimited), ";" (semicolon delimited)
+tomato <- read.table(file=theUrl, header=TRUE, sep=",")
+# "stringAsFactors" arugument can be set to FALSE (default is TRUE)
+# Setting this argument to FALSe will prevent character columns from being converted to factor columns
+head(tomato)
+# "stringAsFactors" arugument can be used in data.frame
+x <- 10:1
+y <- -4:5
+q <- c("Hockey","Football","Baseball","Curling","Rugby",
+       "Lacrosse","Basketball","Tennis","Cricket","Soccer")
+theDFCF <- data.frame(First=x, Second=y, Sport=q) # CF stands for character values as factor
+theDFCF$Sport
+theDFCC <- data.frame(First=x, Second=y, Sport=q, stringsAsFactors=FALSE) # CC stands for character values as characters
+theDFCC$Sport
+# ????????????????????????????????????????????????????????????????????????????????????????????????????
+# Try to use wrapper fucntion for read.table = read.csv
+# ????????????????????????????????????????????????????????????????????????????????????????????????????
+# Wrapper functions
+# func: read.table     sep: <empty>     dec: .
+# func: read.csv       sep: ,           dec: .
+# func: read.csv2      sep: ;           dec: ,
+# func: read_delim     sep: \t          dec: .
+# func: read_delim2    sep: \t          dec: ,
+# Let's have some fun!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+theUrl2 <- "http://jaredlander.com/data/DiamondColors.csv"
+diamondColors <- read.table(file=theUrl, header=TRUE, sep=",")
+# Fun ended!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+# --- 6.1.1 read_delim ----------
+# read_delim function is from readr package by Hadley Wickham
+
+
+# --- 6.1.2 fread ----------
+# fread function is from data.table package by Matt Dowle
+
+
+
+
+
+
+
+
+
