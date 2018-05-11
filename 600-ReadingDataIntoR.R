@@ -30,8 +30,10 @@ theUrl2 <- "http://jaredlander.com/data/DiamondColors.csv"
 diamondColors <- read.table(file=theUrl, header=TRUE, sep=",")
 # Fun ended!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
 # --- 6.1.1 read_delim ----------
 # read_delim function is from readr package by Hadley Wickham
+library(readr)
 
 
 # --- 6.1.2 fread ----------

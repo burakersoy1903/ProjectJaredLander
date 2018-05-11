@@ -175,6 +175,8 @@ Large files can be slow to read into memory using read.table
 
 Chapter 06 -- MMDD2018 ---------------------------------------------------------
 --- 6.1.1 read_delim ----------
+The readr package provides a family of functions for reading text files.
+read_delim for reading delimited files such as CSVs
 
 
 
